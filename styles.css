@@ -1,0 +1,28 @@
+ul {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+.gallery {
+    width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+.gallery-image {
+    width: 360px;
+    height: 200px;
+}
