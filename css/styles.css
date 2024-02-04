@@ -22,6 +22,10 @@ body {
     padding-top: 24px;
 }
 
+.gallery-link:hover {
+    cursor: url(../images/cursor.png), pointer;
+}
+
 .gallery-image {
     width: 360px;
     height: 200px;

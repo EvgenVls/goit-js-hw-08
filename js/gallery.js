@@ -82,5 +82,12 @@ gallery.addEventListener('click', (event) => {
     return;
   }
   const linkImage = event.target.dataset.source;
-  console.log(linkImage);
+  const altImage = event.target.alt;
+  
+  basicLightbox.create(`
+    <div class="modal">
+      <img src="${linkImage}" alt="${altImage}" width="1112" height="640">
+    </div>
+  `).show();
 })
+
