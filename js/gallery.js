@@ -65,6 +65,7 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
+let modal = '';
 
 function createMarcupGallery(images) {
   return images.map(({preview, original, description}) => 
@@ -83,11 +84,21 @@ gallery.addEventListener('click', (event) => {
   }
   const linkImage = event.target.dataset.source;
   const altImage = event.target.alt;
+  event.preventDefault();
   
-  basicLightbox.create(`
+  modal = basicLightbox.create(`
     <div class="modal">
       <img src="${linkImage}" alt="${altImage}" width="1112" height="640">
     </div>
-  `).show();
+  `);
+
+  modal.show();
+
+  
 })
 
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'Escape') {
+    modal.close();
+  }
+})
